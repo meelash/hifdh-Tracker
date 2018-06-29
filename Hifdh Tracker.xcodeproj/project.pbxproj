@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40F21E8020E675C00030C755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F21E7F20E675C00030C755 /* AppDelegate.swift */; };
+		40F21E8220E675C00030C755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F21E8120E675C00030C755 /* ViewController.swift */; };
+		40F21E8520E675C00030C755 /* Hifdh_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40F21E8320E675C00030C755 /* Hifdh_Tracker.xcdatamodeld */; };
+		40F21E8720E675C50030C755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F21E8620E675C50030C755 /* Assets.xcassets */; };
+		40F21E8A20E675C50030C755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F21E8820E675C50030C755 /* Main.storyboard */; };
+		40F21E9620E675C60030C755 /* Hifdh_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F21E9520E675C60030C755 /* Hifdh_TrackerTests.swift */; };
+		40F21EA120E675C60030C755 /* Hifdh_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F21EA020E675C60030C755 /* Hifdh_TrackerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40F21E9220E675C60030C755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40F21E7420E675C00030C755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F21E7B20E675C00030C755;
+			remoteInfo = "Hifdh Tracker";
+		};
+		40F21E9D20E675C60030C755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40F21E7420E675C00030C755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F21E7B20E675C00030C755;
+			remoteInfo = "Hifdh Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40F21E7C20E675C00030C755 /* Hifdh Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hifdh Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F21E7F20E675C00030C755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40F21E8120E675C00030C755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40F21E8420E675C00030C755 /* Hifdh_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hifdh_Tracker.xcdatamodel; sourceTree = "<group>"; };
+		40F21E8620E675C50030C755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40F21E8920E675C50030C755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40F21E8B20E675C50030C755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F21E8C20E675C50030C755 /* Hifdh_Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hifdh_Tracker.entitlements; sourceTree = "<group>"; };
+		40F21E9120E675C60030C755 /* Hifdh TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hifdh TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F21E9520E675C60030C755 /* Hifdh_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hifdh_TrackerTests.swift; sourceTree = "<group>"; };
+		40F21E9720E675C60030C755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F21E9C20E675C60030C755 /* Hifdh TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hifdh TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F21EA020E675C60030C755 /* Hifdh_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hifdh_TrackerUITests.swift; sourceTree = "<group>"; };
+		40F21EA220E675C60030C755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40F21E7920E675C00030C755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F21E8E20E675C60030C755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F21E9920E675C60030C755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40F21E7320E675C00030C755 = {
+			isa = PBXGroup;
+			children = (
+				40F21E7E20E675C00030C755 /* Hifdh Tracker */,
+				40F21E9420E675C60030C755 /* Hifdh TrackerTests */,
+				40F21E9F20E675C60030C755 /* Hifdh TrackerUITests */,
+				40F21E7D20E675C00030C755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40F21E7D20E675C00030C755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40F21E7C20E675C00030C755 /* Hifdh Tracker.app */,
+				40F21E9120E675C60030C755 /* Hifdh TrackerTests.xctest */,
+				40F21E9C20E675C60030C755 /* Hifdh TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40F21E7E20E675C00030C755 /* Hifdh Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				40F21E7F20E675C00030C755 /* AppDelegate.swift */,
+				40F21E8120E675C00030C755 /* ViewController.swift */,
+				40F21E8620E675C50030C755 /* Assets.xcassets */,
+				40F21E8820E675C50030C755 /* Main.storyboard */,
+				40F21E8B20E675C50030C755 /* Info.plist */,
+				40F21E8C20E675C50030C755 /* Hifdh_Tracker.entitlements */,
+				40F21E8320E675C00030C755 /* Hifdh_Tracker.xcdatamodeld */,
+			);
+			path = "Hifdh Tracker";
+			sourceTree = "<group>";
+		};
+		40F21E9420E675C60030C755 /* Hifdh TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				40F21E9520E675C60030C755 /* Hifdh_TrackerTests.swift */,
+				40F21E9720E675C60030C755 /* Info.plist */,
+			);
+			path = "Hifdh TrackerTests";
+			sourceTree = "<group>";
+		};
+		40F21E9F20E675C60030C755 /* Hifdh TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				40F21EA020E675C60030C755 /* Hifdh_TrackerUITests.swift */,
+				40F21EA220E675C60030C755 /* Info.plist */,
+			);
+			path = "Hifdh TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40F21E7B20E675C00030C755 /* Hifdh Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F21EA520E675C60030C755 /* Build configuration list for PBXNativeTarget "Hifdh Tracker" */;
+			buildPhases = (
+				40F21E7820E675C00030C755 /* Sources */,
+				40F21E7920E675C00030C755 /* Frameworks */,
+				40F21E7A20E675C00030C755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hifdh Tracker";
+			productName = "Hifdh Tracker";
+			productReference = 40F21E7C20E675C00030C755 /* Hifdh Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40F21E9020E675C60030C755 /* Hifdh TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F21EA820E675C60030C755 /* Build configuration list for PBXNativeTarget "Hifdh TrackerTests" */;
+			buildPhases = (
+				40F21E8D20E675C60030C755 /* Sources */,
+				40F21E8E20E675C60030C755 /* Frameworks */,
+				40F21E8F20E675C60030C755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40F21E9320E675C60030C755 /* PBXTargetDependency */,
+			);
+			name = "Hifdh TrackerTests";
+			productName = "Hifdh TrackerTests";
+			productReference = 40F21E9120E675C60030C755 /* Hifdh TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		40F21E9B20E675C60030C755 /* Hifdh TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F21EAB20E675C60030C755 /* Build configuration list for PBXNativeTarget "Hifdh TrackerUITests" */;
+			buildPhases = (
+				40F21E9820E675C60030C755 /* Sources */,
+				40F21E9920E675C60030C755 /* Frameworks */,
+				40F21E9A20E675C60030C755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40F21E9E20E675C60030C755 /* PBXTargetDependency */,
+			);
+			name = "Hifdh TrackerUITests";
+			productName = "Hifdh TrackerUITests";
+			productReference = 40F21E9C20E675C60030C755 /* Hifdh TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40F21E7420E675C00030C755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = meelash;
+				TargetAttributes = {
+					40F21E7B20E675C00030C755 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					40F21E9020E675C60030C755 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 40F21E7B20E675C00030C755;
+					};
+					40F21E9B20E675C60030C755 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 40F21E7B20E675C00030C755;
+					};
+				};
+			};
+			buildConfigurationList = 40F21E7720E675C00030C755 /* Build configuration list for PBXProject "Hifdh Tracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40F21E7320E675C00030C755;
+			productRefGroup = 40F21E7D20E675C00030C755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40F21E7B20E675C00030C755 /* Hifdh Tracker */,
+				40F21E9020E675C60030C755 /* Hifdh TrackerTests */,
+				40F21E9B20E675C60030C755 /* Hifdh TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40F21E7A20E675C00030C755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F21E8720E675C50030C755 /* Assets.xcassets in Resources */,
+				40F21E8A20E675C50030C755 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F21E8F20E675C60030C755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F21E9A20E675C60030C755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40F21E7820E675C00030C755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F21E8520E675C00030C755 /* Hifdh_Tracker.xcdatamodeld in Sources */,
+				40F21E8220E675C00030C755 /* ViewController.swift in Sources */,
+				40F21E8020E675C00030C755 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F21E8D20E675C60030C755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F21E9620E675C60030C755 /* Hifdh_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F21E9820E675C60030C755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F21EA120E675C60030C755 /* Hifdh_TrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40F21E9320E675C60030C755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40F21E7B20E675C00030C755 /* Hifdh Tracker */;
+			targetProxy = 40F21E9220E675C60030C755 /* PBXContainerItemProxy */;
+		};
+		40F21E9E20E675C60030C755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40F21E7B20E675C00030C755 /* Hifdh Tracker */;
+			targetProxy = 40F21E9D20E675C60030C755 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40F21E8820E675C50030C755 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40F21E8920E675C50030C755 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40F21EA320E675C60030C755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40F21EA420E675C60030C755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		40F21EA620E675C60030C755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Hifdh Tracker/Hifdh_Tracker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HF269KT3U;
+				INFOPLIST_FILE = "Hifdh Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meelash.Hifdh-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		40F21EA720E675C60030C755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Hifdh Tracker/Hifdh_Tracker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HF269KT3U;
+				INFOPLIST_FILE = "Hifdh Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meelash.Hifdh-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		40F21EA920E675C60030C755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HF269KT3U;
+				INFOPLIST_FILE = "Hifdh TrackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meelash.Hifdh-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hifdh Tracker.app/Contents/MacOS/Hifdh Tracker";
+			};
+			name = Debug;
+		};
+		40F21EAA20E675C60030C755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HF269KT3U;
+				INFOPLIST_FILE = "Hifdh TrackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meelash.Hifdh-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hifdh Tracker.app/Contents/MacOS/Hifdh Tracker";
+			};
+			name = Release;
+		};
+		40F21EAC20E675C60030C755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HF269KT3U;
+				INFOPLIST_FILE = "Hifdh TrackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meelash.Hifdh-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Hifdh Tracker";
+			};
+			name = Debug;
+		};
+		40F21EAD20E675C60030C755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HF269KT3U;
+				INFOPLIST_FILE = "Hifdh TrackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meelash.Hifdh-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Hifdh Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40F21E7720E675C00030C755 /* Build configuration list for PBXProject "Hifdh Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F21EA320E675C60030C755 /* Debug */,
+				40F21EA420E675C60030C755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F21EA520E675C60030C755 /* Build configuration list for PBXNativeTarget "Hifdh Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F21EA620E675C60030C755 /* Debug */,
+				40F21EA720E675C60030C755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F21EA820E675C60030C755 /* Build configuration list for PBXNativeTarget "Hifdh TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F21EA920E675C60030C755 /* Debug */,
+				40F21EAA20E675C60030C755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F21EAB20E675C60030C755 /* Build configuration list for PBXNativeTarget "Hifdh TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F21EAC20E675C60030C755 /* Debug */,
+				40F21EAD20E675C60030C755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		40F21E8320E675C00030C755 /* Hifdh_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40F21E8420E675C00030C755 /* Hifdh_Tracker.xcdatamodel */,
+			);
+			currentVersion = 40F21E8420E675C00030C755 /* Hifdh_Tracker.xcdatamodel */;
+			path = Hifdh_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 40F21E7420E675C00030C755 /* Project object */;
+}
