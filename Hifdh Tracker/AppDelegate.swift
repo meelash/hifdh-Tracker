@@ -7,14 +7,115 @@
 //
 
 import Cocoa
+import JavaScriptCore
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var managedObjectContext: NSManagedObjectContext!
+    ,jsContext: JSContext = JSContext()
+    ,smSingleton: SMSingleton!
+    ,smJSValue: JSValue!
+    ,aayaatJSValues: [URL : JSValue] = [:]
 
-
+    func buildDataFromQuranFiles() {
+        let soorahEntity = NSEntityDescription.entity(forEntityName: "Soorah", in: managedObjectContext)!
+        , aayahEntity = NSEntityDescription.entity(forEntityName: "Aayah", in: managedObjectContext)!
+        var allAayaat: [Aayah] = []
+        
+        let quranFilePaths = Bundle.main.paths(forResourcesOfType: "txt", inDirectory: "Quran Stats/s")
+        for filePath in quranFilePaths {
+            let regex = try? NSRegularExpression(pattern: ".*\\/(.*?).txt$", options: .caseInsensitive)
+            let range = regex?.matches(in: filePath, options: [], range: NSRange(location: 0, length: (filePath as NSString).length))[0].range(at: 1)
+            let soorahNumber = String(filePath[Range(range!, in: filePath)!])
+            let soorah = NSManagedObject(entity: soorahEntity, insertInto: managedObjectContext)
+            soorah.setValue(Int(soorahNumber), forKey: "number")
+            
+            let contents = try? String.init(contentsOfFile: filePath)
+            for (index, aayahString) in (contents?.split(separator: "\n"))!.enumerated() {
+                let aayah = NSManagedObject(entity: aayahEntity, insertInto: managedObjectContext) as! Aayah
+                aayah.setValue(index+1, forKey: "number")
+                aayah.setValue(String(aayahString), forKey: "text")
+                aayah.setValue(soorah, forKey: "soorah")
+                allAayaat.append(aayah)
+            }
+        }
+        
+        // need to save here so that objectID's get set to permanent values before creating JSValues items with those
+        do {
+            try managedObjectContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        for aayah in allAayaat {
+            let idURL = aayah.objectID.uriRepresentation()
+            ,aayahJSValue = smJSValue.objectForKeyedSubscript("addItem").call(withArguments: [idURL.absoluteString])
+            aayaatJSValues[idURL] = aayahJSValue!
+        }
+        // save full sm object, including items, in string form to smSingleton
+        let smDataJSValue = smJSValue.objectForKeyedSubscript("data").call(withArguments: [])
+        smSingleton.setValue(jsContext.objectForKeyedSubscript("JSON").objectForKeyedSubscript("stringify").call(withArguments: [smDataJSValue!]).toString(), forKey: "savedData")
+        
+        // save again
+        do {
+            try managedObjectContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        managedObjectContext = self.persistentContainer.viewContext
+        
+        let x = try? managedObjectContext.fetch(NSFetchRequest(entityName: "SMSingleton"))
+        if  (x?.count)! > 0 {
+            smSingleton = x![0] as! SMSingleton
+            initializeJSAndSM()
+            // this saved data will include all item objects as well
+            let smDataJSValue = jsContext.objectForKeyedSubscript("JSON").objectForKeyedSubscript("parse").call(withArguments: [JSValue(object: smSingleton.savedData!, in: jsContext)])
+            smJSValue = jsContext.objectForKeyedSubscript("SM").objectForKeyedSubscript("load").call(withArguments: [smDataJSValue!])
+            let itemsJSValue = smJSValue.objectForKeyedSubscript("q")
+            , itemsJSValueLength = Int((itemsJSValue?.objectForKeyedSubscript("length").toInt32())!)
+            for index in 0..<itemsJSValueLength {
+                let itemJSValue = itemsJSValue?.objectAtIndexedSubscript(index)
+                , itemIDURLString = itemJSValue?.objectForKeyedSubscript("value").toString()
+                aayaatJSValues[URL(string: itemIDURLString!)!] = itemJSValue!
+            }
+        }
+        else {
+            let smEntity = NSEntityDescription.entity(forEntityName: "SMSingleton", in: managedObjectContext)
+            smSingleton = NSManagedObject(entity: smEntity!, insertInto: managedObjectContext) as! SMSingleton
+            initializeJSAndSM()
+            smJSValue = jsContext.objectForKeyedSubscript("SM").construct(withArguments: [])
+            buildDataFromQuranFiles()
+        }
+    }
+    
+    func initializeJSAndSM() {
+        jsContext.exceptionHandler = { context, exception in
+            if exception != nil {
+                print("JS Exception:", exception!.toString())
+            }
+        }
+        
+        // Specify the path to the jssource.js file.
+        if let smJSSourcePath = Bundle.main.path(forResource: "sm", ofType: "js") {
+            do {
+                // Load its contents to a String variable.
+                let smJSSourceContents = try String(contentsOfFile: smJSSourcePath)
+                
+                // Add the Javascript code that currently exists in the jsSourceContents to the Javascript Runtime through the jsContext object.
+                jsContext.evaluateScript(smJSSourceContents)
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        }
+        else {
+            return print("Couldn't find sm.js file!")
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

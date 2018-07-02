@@ -14,6 +14,8 @@
 		40F21E8A20E675C50030C755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F21E8820E675C50030C755 /* Main.storyboard */; };
 		40F21E9620E675C60030C755 /* Hifdh_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F21E9520E675C60030C755 /* Hifdh_TrackerTests.swift */; };
 		40F21EA120E675C60030C755 /* Hifdh_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F21EA020E675C60030C755 /* Hifdh_TrackerUITests.swift */; };
+		40F21EAF20E696350030C755 /* Quran Stats in Resources */ = {isa = PBXBuildFile; fileRef = 40F21EAE20E696350030C755 /* Quran Stats */; };
+		40F21EB120E7DF650030C755 /* sm.js in Resources */ = {isa = PBXBuildFile; fileRef = 40F21EB020E7DF650030C755 /* sm.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		40F21E9C20E675C60030C755 /* Hifdh TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hifdh TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F21EA020E675C60030C755 /* Hifdh_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hifdh_TrackerUITests.swift; sourceTree = "<group>"; };
 		40F21EA220E675C60030C755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F21EAE20E696350030C755 /* Quran Stats */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Quran Stats"; sourceTree = "<group>"; };
+		40F21EB020E7DF650030C755 /* sm.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sm.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 		40F21E7E20E675C00030C755 /* Hifdh Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				40F21EB020E7DF650030C755 /* sm.js */,
 				40F21E7F20E675C00030C755 /* AppDelegate.swift */,
+				40F21EAE20E696350030C755 /* Quran Stats */,
 				40F21E8120E675C00030C755 /* ViewController.swift */,
 				40F21E8620E675C50030C755 /* Assets.xcassets */,
 				40F21E8820E675C50030C755 /* Main.storyboard */,
@@ -231,7 +237,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F21EB120E7DF650030C755 /* sm.js in Resources */,
 				40F21E8720E675C50030C755 /* Assets.xcassets in Resources */,
+				40F21EAF20E696350030C755 /* Quran Stats in Resources */,
 				40F21E8A20E675C50030C755 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

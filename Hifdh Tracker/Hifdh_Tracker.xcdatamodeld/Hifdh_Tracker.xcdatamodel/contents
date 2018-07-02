@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Aayah" representedClassName="Aayah" syncable="YES" codeGenerationType="class">
+        <attribute name="afsString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lapse" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="of" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="optimumInterval" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="previousDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="repetition" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="history" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Repetition" inverseName="aayah" inverseEntity="Repetition" syncable="YES"/>
+        <relationship name="soorah" maxCount="1" deletionRule="Nullify" destinationEntity="Soorah" inverseName="aayaat" inverseEntity="Soorah" syncable="YES"/>
+    </entity>
+    <entity name="Repetition" representedClassName="Repetition" syncable="YES" codeGenerationType="class">
+        <attribute name="answer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="aayah" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Aayah" inverseName="history" inverseEntity="Aayah" syncable="YES"/>
+    </entity>
+    <entity name="SMSingleton" representedClassName="SMSingleton" syncable="YES" codeGenerationType="class">
+        <attribute name="savedData" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Soorah" representedClassName="Soorah" syncable="YES" codeGenerationType="class">
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="aayaat" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Aayah" inverseName="soorah" inverseEntity="Aayah" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Aayah" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="SMSingleton" positionX="-36" positionY="90" width="128" height="60"/>
+        <element name="Soorah" positionX="-54" positionY="0" width="128" height="30"/>
+        <element name="Repetition" positionX="-54" positionY="63" width="128" height="90"/>
+    </elements>
 </model>
