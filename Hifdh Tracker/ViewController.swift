@@ -63,7 +63,7 @@ class ViewController: NSViewController {
             // update Aayah entity from updated js item
             let aayahDataJSValue = aayahJSValue!.objectForKeyedSubscript("data").call(withArguments: [])
             aayah.setValuesForKeys([
-                "afsString"       : appDelegate.jsContext.objectForKeyedSubscript("JSON").objectForKeyedSubscript("stringify").call(withArguments: [aayahDataJSValue!.objectForKeyedSubscript("afs")]).toString(),
+                "afsString"       : appDelegate.jsContext.objectForKeyedSubscript("JSON").objectForKeyedSubscript("stringify").call(withArguments: [aayahDataJSValue!.objectForKeyedSubscript("_afs")]).toString(),
                 "dueDate"         : aayahDataJSValue!.objectForKeyedSubscript("dueDate").toDate(),
                 "lapse"           : aayahDataJSValue!.objectForKeyedSubscript("lapse").toInt32(),
                 "of"              : aayahDataJSValue!.objectForKeyedSubscript("of").toDouble(),
