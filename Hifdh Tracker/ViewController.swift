@@ -73,8 +73,7 @@ class ViewController: NSViewController {
             ])
             
             // add history record for each aayah
-            let repetitionEntity = NSEntityDescription.entity(forEntityName: "Repetition", in: managedObjectContext)
-            , repetition = NSManagedObject(entity: repetitionEntity!, insertInto: managedObjectContext) as! Repetition
+            let repetition = Repetition(context: managedObjectContext)
             repetition.setValuesForKeys([
                 "date" : datePicker.dateValue,
                 "answer" : answer

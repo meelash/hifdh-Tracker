@@ -18,8 +18,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     ,aayaatJSValues: [URL : JSValue] = [:]
 
     func buildDataFromQuranFiles() {
-        let soorahEntity = NSEntityDescription.entity(forEntityName: "Soorah", in: managedObjectContext)!
-        , aayahEntity = NSEntityDescription.entity(forEntityName: "Aayah", in: managedObjectContext)!
         var allAayaat: [Aayah] = []
         
         let quranFilePaths = Bundle.main.paths(forResourcesOfType: "txt", inDirectory: "Quran Stats/s")
@@ -27,12 +25,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let regex = try? NSRegularExpression(pattern: ".*\\/(.*?).txt$", options: .caseInsensitive)
             let range = regex?.matches(in: filePath, options: [], range: NSRange(location: 0, length: (filePath as NSString).length))[0].range(at: 1)
             let soorahNumber = String(filePath[Range(range!, in: filePath)!])
-            let soorah = NSManagedObject(entity: soorahEntity, insertInto: managedObjectContext)
+            let soorah = Soorah(context: managedObjectContext)
             soorah.setValue(Int(soorahNumber), forKey: "number")
             
             let contents = try? String.init(contentsOfFile: filePath)
             for (index, aayahString) in (contents?.split(separator: "\n"))!.enumerated() {
-                let aayah = NSManagedObject(entity: aayahEntity, insertInto: managedObjectContext) as! Aayah
+                let aayah = Aayah(context: managedObjectContext)
                 aayah.setValue(index+1, forKey: "number")
                 aayah.setValue(String(aayahString), forKey: "text")
                 aayah.setValue(soorah, forKey: "soorah")
@@ -85,8 +83,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         else {
-            let smEntity = NSEntityDescription.entity(forEntityName: "SMSingleton", in: managedObjectContext)
-            smSingleton = NSManagedObject(entity: smEntity!, insertInto: managedObjectContext) as! SMSingleton
+            smSingleton = SMSingleton(context: managedObjectContext)
             initializeJSAndSM()
             smJSValue = jsContext.objectForKeyedSubscript("SM").construct(withArguments: [])
             buildDataFromQuranFiles()
